@@ -1,0 +1,264 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Adjust for fixed header */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #F9F7F7, #DBE2EF); /* Subtle gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Header Styling */
+header {
+    background-color: #112D4E; /* Dark Navy */
+    color: #F9F7F7; /* Light Cream */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color: #112D4E; /* Dark Navy */
+    color: #F9F7F7;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown button:hover {
+    background-color: #3F72AF; /* Medium Blue */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F7F7; /* Light Cream */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 1;
+    right: 0;
+    min-width: 150px;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: #112D4E;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #DBE2EF; /* Soft Blue on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #DBE2EF;
+    color: #112D4E;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed; /* Fix footer at the bottom */
+    bottom: 0;
+    width: 100%; /* Full-width footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 180px;
+    font-size: 18px;
+    color: #112D4E;
+    font-weight: normal;
+}
+
+.welcome-message strong {
+    font-weight: bold;
+    color: #3F72AF; /* Highlighted library name */
+}
+
+/* Box Styling (General) */
+.search-box,
+.reserve-box {
+    background: #F9F7F7;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.register-box,
+.login-box {
+    background: #F9F7F7;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Smaller for login/register */
+    text-align: center;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group input,
+.styled-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #DBE2EF;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.styled-select:focus {
+    border-color: #3F72AF; /* Medium Blue Focus */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3F72AF; /* Medium Blue Button */
+    color: #F9F7F7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #112D4E; /* Dark Navy on hover */
+}
+
+/* Button Group Styling */
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* Success/Error Messages */
+#message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-box {
+    color: #155724; /* Dark green text */
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Green border */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.error-box {
+    color: #721c24; /* Dark red text */
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb; /* Red border */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #DBE2EF;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #112D4E;
+    color: #F9F7F7;
+}
+
+table td {
+    background-color: #F9F7F7;
+}
+
+/* Pagination Styling */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #112D4E;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pagination a.active {
+    color: #F9F7F7;
+    background-color: #112D4E;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
